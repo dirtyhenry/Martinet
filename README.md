@@ -22,7 +22,7 @@ pod "Martinet"
 
 ## Author
 
-dirtyhenry, mickael@flochlay.com
+Bootstragram
 
 ## License
 
