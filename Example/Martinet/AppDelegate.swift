@@ -12,21 +12,12 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-    var alertController: AppDomainStatusBarController?
-
+    var appRoute: AppRoute?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
 
         if let window = window {
-            let navigationViewController = window.rootViewController as! UINavigationController
-            let navigationRootViewController = navigationViewController.viewControllers[0] as! NavigationRootViewController
-
-            alertController = AppDomainStatusBarController(window: window)
-            alertController?.setup()
-
-            navigationRootViewController.didTapAlert = {
-                self.alertController?.toggleAlertView()
-            }
+            appRoute = AppRoute(window: window)
         }
 
         return true

@@ -9,42 +9,6 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Martinet Root-->
-        <scene sceneID="9Le-CM-9Ok">
-            <objects>
-                <tableViewController id="LMr-f9-TUk" customClass="NavigationRootViewController" customModule="Martinet_Example" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="H4p-xz-crp">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="customCell" id="1t3-TK-v1M">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="1t3-TK-v1M" id="EHk-MT-IwR">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="LMr-f9-TUk" id="ER3-KP-v2i"/>
-                            <outlet property="delegate" destination="LMr-f9-TUk" id="l5v-3F-FDR"/>
-                        </connections>
-                    </tableView>
-                    <toolbarItems/>
-                    <navigationItem key="navigationItem" title="Martinet Root" id="ldH-rn-Mil">
-                        <barButtonItem key="rightBarButtonItem" title="Toggle Alert" id="Rtp-RA-Hj2">
-                            <connections>
-                                <action selector="toggleAlertAction:" destination="LMr-f9-TUk" id="Vwp-h3-DaH"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="sOA-sv-P9m" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1021" y="228"/>
-        </scene>
         <!--Navigation Controller-->
         <scene sceneID="BW1-6x-KmV">
             <objects>
@@ -53,9 +17,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
-                    <connections>
-                        <segue destination="LMr-f9-TUk" kind="relationship" relationship="rootViewController" id="Mr4-LO-fRJ"/>
-                    </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SSw-cb-vhE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

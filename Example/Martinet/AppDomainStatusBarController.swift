@@ -8,7 +8,7 @@
 
 import UIKit
 
-class AppDomainStatusBarController {
+class AppDomainStatusBarController: NSObject {
     let window: UIWindow
     let statusBarHeight: CGFloat
     let statusBarHeightWhenClosed: CGFloat = 20.0
@@ -59,7 +59,7 @@ class AppDomainStatusBarController {
         }
     }
 
-    func toggleAlertView() {
+    func toggleAlertView(sender: Any) {
         alertIsVisible ? hideAlertView() : showAlertView()
     }
 
