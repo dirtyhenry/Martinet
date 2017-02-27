@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		00058C031E5AFCA100AF2357 /* AppDomainStatusBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00058C021E5AFCA100AF2357 /* AppDomainStatusBarController.swift */; };
 		00058C051E5B02F000AF2357 /* NavigationRootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00058C041E5B02F000AF2357 /* NavigationRootViewController.swift */; };
+		0079280C1E648354006FD3F6 /* DemoAsyncDownloadsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0079280B1E648354006FD3F6 /* DemoAsyncDownloadsPresenter.swift */; };
 		00BD67201E609607003F9464 /* 2016-stereogum-best-albums.json in Resources */ = {isa = PBXBuildFile; fileRef = 00BD671F1E609607003F9464 /* 2016-stereogum-best-albums.json */; };
 		00BD67231E60970D003F9464 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 00BD67211E60970D003F9464 /* Main.storyboard */; };
 		00BD67251E609735003F9464 /* AppRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00BD67241E609735003F9464 /* AppRoute.swift */; };
@@ -34,6 +35,7 @@
 /* Begin PBXFileReference section */
 		00058C021E5AFCA100AF2357 /* AppDomainStatusBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDomainStatusBarController.swift; sourceTree = "<group>"; };
 		00058C041E5B02F000AF2357 /* NavigationRootViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationRootViewController.swift; sourceTree = "<group>"; };
+		0079280B1E648354006FD3F6 /* DemoAsyncDownloadsPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DemoAsyncDownloadsPresenter.swift; sourceTree = "<group>"; };
 		00BD671F1E609607003F9464 /* 2016-stereogum-best-albums.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "2016-stereogum-best-albums.json"; sourceTree = "<group>"; };
 		00BD67221E60970D003F9464 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		00BD67241E609735003F9464 /* AppRoute.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppRoute.swift; sourceTree = "<group>"; };
@@ -114,6 +116,7 @@
 			children = (
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
 				00BD67241E609735003F9464 /* AppRoute.swift */,
+				0079280B1E648354006FD3F6 /* DemoAsyncDownloadsPresenter.swift */,
 				00BD67261E609E86003F9464 /* StereogumTop2016Presenter.swift */,
 				607FACDC1AFB9204008FA782 /* Images.xcassets */,
 				00BD67211E60970D003F9464 /* Main.storyboard */,
@@ -227,9 +230,11 @@
 				TargetAttributes = {
 					607FACCF1AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = 7HX93AP7WL;
 					};
 					607FACE41AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = 7HX93AP7WL;
 						TestTargetID = 607FACCF1AFB9204008FA782;
 					};
 				};
@@ -374,6 +379,7 @@
 			files = (
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
 				00BD67251E609735003F9464 /* AppRoute.swift in Sources */,
+				0079280C1E648354006FD3F6 /* DemoAsyncDownloadsPresenter.swift in Sources */,
 				00058C051E5B02F000AF2357 /* NavigationRootViewController.swift in Sources */,
 				00058C031E5AFCA100AF2357 /* AppDomainStatusBarController.swift in Sources */,
 				00BD67271E609E86003F9464 /* StereogumTop2016Presenter.swift in Sources */,
@@ -513,6 +519,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 7HX93AP7WL;
 				INFOPLIST_FILE = Martinet/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
@@ -527,6 +534,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 7HX93AP7WL;
 				INFOPLIST_FILE = Martinet/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
@@ -540,6 +548,7 @@
 			baseConfigurationReference = F202EBD7C2B8C86421930168 /* Pods-Martinet_Tests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
+				DEVELOPMENT_TEAM = 7HX93AP7WL;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -557,6 +566,7 @@
 			baseConfigurationReference = E26E40A0EF8F0C02C929FCE8 /* Pods-Martinet_Tests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
+				DEVELOPMENT_TEAM = 7HX93AP7WL;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";

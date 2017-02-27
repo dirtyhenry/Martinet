@@ -9,6 +9,11 @@
 import UIKit
 import Martinet
 
+enum DemoMenuItem: String {
+    case StereogumTopAlbums2016 = "Stereogum Top Albums 2016"
+    case DemoAsyncDownloads = "Demo Async Downloads"
+}
+
 class AppRoute: NSObject {
     let navigationController: UINavigationController
     var alertController: AppDomainStatusBarController?
@@ -23,17 +28,31 @@ class AppRoute: NSObject {
     }
 
     func pushMenuViewController() {
-        let items = ["Stereogum Top Albums 2016"]
+        let items: [DemoMenuItem] = [
+            .StereogumTopAlbums2016,
+            .DemoAsyncDownloads
+        ]
+
         let rootViewController = ItemsTableViewController(items: items, configure: { cell, item in
-            cell.textLabel?.text = item
+            cell.textLabel?.text = item.rawValue
         })
         rootViewController.title = "Martinet's Menu"
         rootViewController.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Toggle Alert", style: .plain, target: self, action: #selector(toggleAlertView(sender:)))
+
         rootViewController.didSelect = { menuItem in
-            let stereogumTop = StereogumTop2016Presenter()
-            if let stereogumVC = stereogumTop.viewController {
-                self.navigationController.modalPresentationStyle = .overCurrentContext
-                self.navigationController.pushViewController(stereogumVC, animated: true)
+            switch(menuItem) {
+            case .StereogumTopAlbums2016:
+                let stereogumTop = StereogumTop2016Presenter()
+                if let stereogumVC = stereogumTop.viewController {
+                    self.navigationController.modalPresentationStyle = .overCurrentContext
+                    self.navigationController.pushViewController(stereogumVC, animated: true)
+                }
+
+            case .DemoAsyncDownloads:
+                let demoAsyncDownloads = DemoAsyncDownloadsPresenter()
+                if let demoAyncDownloadsVC = demoAsyncDownloads.viewController {
+                    self.navigationController.pushViewController(demoAyncDownloadsVC, animated: true)
+                }
             }
         }
 
