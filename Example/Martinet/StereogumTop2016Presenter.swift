@@ -10,26 +10,59 @@ import UIKit
 import Martinet
 
 class StereogumTop2016Presenter {
-    var albums: [Any] = []
-    var viewController: ItemsTableViewController<Any, UITableViewCell>?
+    struct TopAlbum {
+        var rank: Int
+        var artistName: String
+        var albumName: String
+        var labelName: String
+    }
+
+    var albums: [TopAlbum] = []
+    var tableViewController: ItemsTableViewController<TopAlbum, UITableViewCell>?
+    var collectionViewController: ItemsCollectionViewController<TopAlbum, AlbumCollectionViewCell>?
 
     init() {
+        loadAlbums()
+
+        tableViewController = ItemsTableViewController(items: albums, configure: { cell, album in
+                    cell.textLabel?.text = "\(album.rank). \(album.artistName)"
+        })
+        tableViewController?.title = "Stereogum Top Albums 2016"
+
+        let collectionViewLayout = UICollectionViewFlowLayout()
+        collectionViewLayout.scrollDirection = .vertical
+        let halfScreenWidth = UIScreen.main.applicationFrame.size.width / 2.0
+        collectionViewLayout.itemSize = CGSize(width: halfScreenWidth, height: halfScreenWidth)
+        collectionViewLayout.minimumLineSpacing = 0.0
+        collectionViewLayout.minimumInteritemSpacing = 0.0
+
+        collectionViewController = ItemsCollectionViewController(collectionViewLayout: collectionViewLayout, items: albums, configure: { cell, album in
+            cell.artistLabel.text = album.artistName
+            cell.rankLabel.text = String(album.rank)
+        })
+    }
+
+    func loadAlbums() {
+        var result: [TopAlbum] = []
+
         do {
             if let url = Bundle.main.url(forResource: "2016-stereogum-best-albums", withExtension: "json") {
                 let jsonData = try Data(contentsOf: url)
                 let jsonResult = try JSONSerialization.jsonObject(with: jsonData)
-                albums = jsonResult as! [Any]
-                viewController = ItemsTableViewController(items: albums, configure: { cell, item in
-                    let album = item as! [String: Any]
-                    let rank = album["Rank"] as! Int
-                    let artist = album["Artist"] as! String
-                    cell.textLabel?.text = "\(rank). \(artist)"
-                    cell.detailTextLabel?.text = "\(rank). \(artist)"
-                })
-                viewController?.title = "Stereogum Top Albums 2016"
+                let jsonAlbums = jsonResult as! [[String: Any]]
+                for jsonAlbum in jsonAlbums {
+                    let albumName = jsonAlbum["Album Title"] as! String
+                    let artistName = jsonAlbum["Artist"] as! String
+                    let labelName = jsonAlbum["Label"] as! String
+                    let rank = jsonAlbum["Rank"] as! Int
+
+                    result.append(TopAlbum(rank: rank, artistName: artistName, albumName: albumName, labelName: labelName))
+                }
             }
         } catch {
             debugPrint("JSON parsing failed")
         }
+
+        self.albums = result
     }
 }

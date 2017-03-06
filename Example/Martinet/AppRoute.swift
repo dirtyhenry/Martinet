@@ -10,7 +10,8 @@ import UIKit
 import Martinet
 
 enum DemoMenuItem: String {
-    case StereogumTopAlbums2016 = "Stereogum Top Albums 2016"
+    case StereogumTopAlbums2016Table = "Stereogum Top Albums 2016 (table)"
+    case StereogumTopAlbums2016Collection = "Stereogum Top Albums 2016 (collection)"
     case DemoAsyncDownloads = "Demo Async Downloads"
 }
 
@@ -29,7 +30,8 @@ class AppRoute: NSObject {
 
     func pushMenuViewController() {
         let items: [DemoMenuItem] = [
-            .StereogumTopAlbums2016,
+            .StereogumTopAlbums2016Table,
+            .StereogumTopAlbums2016Collection,
             .DemoAsyncDownloads
         ]
 
@@ -41,9 +43,16 @@ class AppRoute: NSObject {
 
         rootViewController.didSelect = { menuItem in
             switch(menuItem) {
-            case .StereogumTopAlbums2016:
+            case .StereogumTopAlbums2016Table:
                 let stereogumTop = StereogumTop2016Presenter()
-                if let stereogumVC = stereogumTop.viewController {
+                if let stereogumVC = stereogumTop.tableViewController {
+                    self.navigationController.modalPresentationStyle = .overCurrentContext
+                    self.navigationController.pushViewController(stereogumVC, animated: true)
+                }
+
+            case .StereogumTopAlbums2016Collection:
+                let stereogumTop = StereogumTop2016Presenter()
+                if let stereogumVC = stereogumTop.collectionViewController {
                     self.navigationController.modalPresentationStyle = .overCurrentContext
                     self.navigationController.pushViewController(stereogumVC, animated: true)
                 }

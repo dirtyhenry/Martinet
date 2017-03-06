@@ -14,6 +14,8 @@
 		00BD67231E60970D003F9464 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 00BD67211E60970D003F9464 /* Main.storyboard */; };
 		00BD67251E609735003F9464 /* AppRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00BD67241E609735003F9464 /* AppRoute.swift */; };
 		00BD67271E609E86003F9464 /* StereogumTop2016Presenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00BD67261E609E86003F9464 /* StereogumTop2016Presenter.swift */; };
+		00C538B81E6DD76400F6EAA9 /* AlbumCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00C538B71E6DD76400F6EAA9 /* AlbumCollectionViewCell.swift */; };
+		00C538BA1E6DD77400F6EAA9 /* AlbumCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 00C538B91E6DD77400F6EAA9 /* AlbumCollectionViewCell.xib */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
@@ -40,6 +42,8 @@
 		00BD67221E60970D003F9464 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		00BD67241E609735003F9464 /* AppRoute.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppRoute.swift; sourceTree = "<group>"; };
 		00BD67261E609E86003F9464 /* StereogumTop2016Presenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StereogumTop2016Presenter.swift; sourceTree = "<group>"; };
+		00C538B71E6DD76400F6EAA9 /* AlbumCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlbumCollectionViewCell.swift; sourceTree = "<group>"; };
+		00C538B91E6DD77400F6EAA9 /* AlbumCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AlbumCollectionViewCell.xib; sourceTree = "<group>"; };
 		090DF4648819EE9CA2773B19 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* Martinet_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Martinet_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -124,6 +128,8 @@
 				607FACD31AFB9204008FA782 /* Supporting Files */,
 				00058C021E5AFCA100AF2357 /* AppDomainStatusBarController.swift */,
 				00058C041E5B02F000AF2357 /* NavigationRootViewController.swift */,
+				00C538B71E6DD76400F6EAA9 /* AlbumCollectionViewCell.swift */,
+				00C538B91E6DD77400F6EAA9 /* AlbumCollectionViewCell.xib */,
 			);
 			name = "Example for Martinet";
 			path = Martinet;
@@ -265,6 +271,7 @@
 			files = (
 				00BD67201E609607003F9464 /* 2016-stereogum-best-albums.json in Resources */,
 				607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */,
+				00C538BA1E6DD77400F6EAA9 /* AlbumCollectionViewCell.xib in Resources */,
 				607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */,
 				00BD67231E60970D003F9464 /* Main.storyboard in Resources */,
 			);
@@ -383,6 +390,7 @@
 				00058C051E5B02F000AF2357 /* NavigationRootViewController.swift in Sources */,
 				00058C031E5AFCA100AF2357 /* AppDomainStatusBarController.swift in Sources */,
 				00BD67271E609E86003F9464 /* StereogumTop2016Presenter.swift in Sources */,
+				00C538B81E6DD76400F6EAA9 /* AlbumCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
