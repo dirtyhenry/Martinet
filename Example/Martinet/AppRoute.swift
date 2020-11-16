@@ -1,11 +1,3 @@
-//
-//  AppRoute.swift
-//  Martinet
-//
-//  Created by Mickaël Floc'hlay on 24/02/2017.
-//  Copyright © 2017 CocoaPods. All rights reserved.
-//
-
 import UIKit
 import Martinet
 
@@ -17,10 +9,12 @@ enum DemoMenuItem: String {
 
 class AppRoute: NSObject {
     let navigationController: UINavigationController
+    let storyboard: UIStoryboard
     var alertController: AppDomainStatusBarController?
 
     init(window: UIWindow) {
         navigationController = window.rootViewController as! UINavigationController
+        storyboard = UIStoryboard.init(name: "Main", bundle: nil)
         super.init()
         self.pushMenuViewController()
 
@@ -32,8 +26,8 @@ class AppRoute: NSObject {
         let items: [DemoMenuItem] = [
             .StereogumTopAlbums2016Table,
             .StereogumTopAlbums2016Collection,
-            .DemoAsyncDownloads
-        ]
+            .DemoAsyncDownloads,
+            ]
 
         let rootViewController = ItemsTableViewController(items: items, configure: { cell, item in
             cell.textLabel?.text = item.rawValue
@@ -68,7 +62,7 @@ class AppRoute: NSObject {
         navigationController.pushViewController(rootViewController, animated: false)
     }
 
-    func toggleAlertView(sender: Any) {
+    @objc func toggleAlertView(sender: Any) {
         alertController?.toggleAlertView(sender: sender)
     }
 }

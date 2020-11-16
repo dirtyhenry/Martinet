@@ -3,7 +3,7 @@ This application makes use of the following third party libraries:
 
 ## Martinet
 
-Copyright (c) 2017 dirtyhenry <mickael@flochlay.com>
+Copyright (c) 2017 Bootstragram <contact@bootstragram.com>
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
