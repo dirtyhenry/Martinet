@@ -1,13 +1,4 @@
-//
-//  AppDelegate.swift
-//  Martinet
-//
-//  Created by dirtyhenry on 02/20/2017.
-//  Copyright (c) 2017 dirtyhenry. All rights reserved.
-//
-
 import UIKit
-import Firebase
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -16,7 +7,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var appRoute: AppRoute?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        FirebaseApp.configure()
 
         if let window = window {
             appRoute = AppRoute(window: window)

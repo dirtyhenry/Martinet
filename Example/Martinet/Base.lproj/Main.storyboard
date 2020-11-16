@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="XLM-JU-BmF">
-    <device id="retina4_7" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="XLM-JU-BmF">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -21,64 +19,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SSw-cb-vhE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="70" y="228"/>
-        </scene>
-        <!--FirebasePOC View Controller-->
-        <scene sceneID="ODM-B0-Cmf">
-            <objects>
-                <viewController storyboardIdentifier="firebasePOCVC" id="WgA-dD-2Iu" customClass="FirebasePOCViewController" customModule="Martinet_Example" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="2RG-MI-7ix"/>
-                        <viewControllerLayoutGuide type="bottom" id="UGr-ap-EVE"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="HYM-0f-bLd">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vKV-hf-KIo">
-                                <rect key="frame" x="16" y="36" width="46" height="30"/>
-                                <state key="normal" title="Create"/>
-                                <connections>
-                                    <action selector="createAction:" destination="WgA-dD-2Iu" eventType="touchUpInside" id="Wfm-O7-f80"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ImN-mO-zfn">
-                                <rect key="frame" x="78" y="36" width="35" height="30"/>
-                                <state key="normal" title="Read"/>
-                                <connections>
-                                    <action selector="readAction:" destination="WgA-dD-2Iu" eventType="touchUpInside" id="BQB-2w-ETQ"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oiZ-mX-DJa">
-                                <rect key="frame" x="129" y="36" width="51" height="30"/>
-                                <state key="normal" title="Update"/>
-                                <connections>
-                                    <action selector="updateAction:" destination="WgA-dD-2Iu" eventType="touchUpInside" id="Ucn-HL-yPz"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7YC-cN-MZz">
-                                <rect key="frame" x="196" y="36" width="45" height="30"/>
-                                <state key="normal" title="Delete"/>
-                                <connections>
-                                    <action selector="deleteAction:" destination="WgA-dD-2Iu" eventType="touchUpInside" id="2kx-Fi-k1v"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="oiZ-mX-DJa" firstAttribute="top" secondItem="2RG-MI-7ix" secondAttribute="bottom" constant="16" id="4B2-TV-vYy"/>
-                            <constraint firstItem="vKV-hf-KIo" firstAttribute="leading" secondItem="HYM-0f-bLd" secondAttribute="leading" constant="16" id="9kx-8y-tWO"/>
-                            <constraint firstItem="7YC-cN-MZz" firstAttribute="top" secondItem="2RG-MI-7ix" secondAttribute="bottom" constant="16" id="Orb-b7-1nX"/>
-                            <constraint firstItem="ImN-mO-zfn" firstAttribute="top" secondItem="2RG-MI-7ix" secondAttribute="bottom" constant="16" id="Y3n-qB-28a"/>
-                            <constraint firstItem="vKV-hf-KIo" firstAttribute="top" secondItem="2RG-MI-7ix" secondAttribute="bottom" constant="16" id="bbz-8n-Hb8"/>
-                            <constraint firstItem="oiZ-mX-DJa" firstAttribute="leading" secondItem="ImN-mO-zfn" secondAttribute="trailing" constant="16" id="hHV-p1-Ed9"/>
-                            <constraint firstItem="ImN-mO-zfn" firstAttribute="leading" secondItem="vKV-hf-KIo" secondAttribute="trailing" constant="16" id="j1x-8d-Xyx"/>
-                            <constraint firstItem="7YC-cN-MZz" firstAttribute="leading" secondItem="oiZ-mX-DJa" secondAttribute="trailing" constant="16" id="qQM-au-5dL"/>
-                        </constraints>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="eYT-0z-2xj" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="70" y="904"/>
         </scene>
     </scenes>
 </document>

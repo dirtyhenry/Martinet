@@ -1,11 +1,3 @@
-//
-//  AppRoute.swift
-//  Martinet
-//
-//  Created by Mickaël Floc'hlay on 24/02/2017.
-//  Copyright © 2017 CocoaPods. All rights reserved.
-//
-
 import UIKit
 import Martinet
 
@@ -13,7 +5,6 @@ enum DemoMenuItem: String {
     case StereogumTopAlbums2016Table = "Stereogum Top Albums 2016 (table)"
     case StereogumTopAlbums2016Collection = "Stereogum Top Albums 2016 (collection)"
     case DemoAsyncDownloads = "Demo Async Downloads"
-    case FirebaseTools = "Firebase Tools"
 }
 
 class AppRoute: NSObject {
@@ -36,7 +27,6 @@ class AppRoute: NSObject {
             .StereogumTopAlbums2016Table,
             .StereogumTopAlbums2016Collection,
             .DemoAsyncDownloads,
-            .FirebaseTools,
             ]
 
         let rootViewController = ItemsTableViewController(items: items, configure: { cell, item in
@@ -66,10 +56,6 @@ class AppRoute: NSObject {
                 if let demoAyncDownloadsVC = demoAsyncDownloads.viewController {
                     self.navigationController.pushViewController(demoAyncDownloadsVC, animated: true)
                 }
-
-            case .FirebaseTools:
-                let firebaseVC = self.storyboard.instantiateViewController(withIdentifier: "firebasePOCVC")
-                self.navigationController.pushViewController(firebaseVC, animated: true)
             }
         }
 
