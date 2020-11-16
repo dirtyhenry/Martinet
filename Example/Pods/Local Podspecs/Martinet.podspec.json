@@ -1,20 +1,21 @@
 {
   "name": "Martinet",
   "version": "0.1.0",
-  "summary": "A short description of Martinet.",
-  "description": "TODO: Add long description of the pod here.",
-  "homepage": "https://github.com/dirtyhenry/Martinet",
+  "summary": "A collection of utilities for iOS Swift development.",
+  "description": "A collection of utilities for iOS Swift development, including array-backed generic \ntable and collection view controllers.",
+  "homepage": "https://github.com/Bootstragram/Martinet",
   "license": {
     "type": "MIT",
     "file": "LICENSE"
   },
   "authors": {
-    "dirtyhenry": "mickael@flochlay.com"
+    "Bootstragram": "contact@bootstragram.com"
   },
   "source": {
-    "git": "https://github.com/dirtyhenry/Martinet.git",
+    "git": "https://github.com/Bootstragram/Martinet.git",
     "tag": "0.1.0"
   },
+  "social_media_url": "https://twitter.com/bootstragram",
   "platforms": {
     "ios": "8.0"
   },
