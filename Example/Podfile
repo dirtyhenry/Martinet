@@ -1,14 +1,17 @@
-use_frameworks!
+platform :ios, '11.0'
 
 target 'Martinet_Example' do
+  use_frameworks!
   pod 'Martinet', :path => '../'
+
+  pod 'Firebase'
+  pod 'Firebase/Core'
+  pod 'Firebase/Database'
+
+  pod 'ObjectMapper'
+  pod 'PromiseKit'
 
   target 'Martinet_Tests' do
     inherit! :search_paths
-
-    pod 'Quick', '~> 1.0.0'
-  pod 'Nimble', '~> 5.1.1'
-  pod 'FBSnapshotTestCase'
-  pod 'Nimble-Snapshots'
   end
 end
