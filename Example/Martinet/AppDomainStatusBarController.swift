@@ -81,8 +81,8 @@ class AppDomainStatusBarController: NSObject {
     }
 
     private func add(childViewController child: UIViewController, toParentViewController parent: UIViewController) {
-        parent.addChildViewController(child)
+        parent.addChild(child)
         parent.view.addSubview(child.view)
-        child.didMove(toParentViewController: parent)
+        child.didMove(toParent: parent)
     }
 }

@@ -12,7 +12,7 @@ private let reuseIdentifier = "Cell"
 
 open class ItemsCollectionViewController<Item, Cell: UICollectionViewCell>: UICollectionViewController {
     var items: [Item] = []
-    var configure: (Cell, Item) -> () = { _ in }
+    var configure: (Cell, Item) -> () = { _, _ in }
     var didSelect: (Item) -> () = { _ in }
     let reuseIdentifier = "reuseIdentifier"
 

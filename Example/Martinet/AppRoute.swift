@@ -13,14 +13,17 @@ enum DemoMenuItem: String {
     case StereogumTopAlbums2016Table = "Stereogum Top Albums 2016 (table)"
     case StereogumTopAlbums2016Collection = "Stereogum Top Albums 2016 (collection)"
     case DemoAsyncDownloads = "Demo Async Downloads"
+    case FirebaseTools = "Firebase Tools"
 }
 
 class AppRoute: NSObject {
     let navigationController: UINavigationController
+    let storyboard: UIStoryboard
     var alertController: AppDomainStatusBarController?
 
     init(window: UIWindow) {
         navigationController = window.rootViewController as! UINavigationController
+        storyboard = UIStoryboard.init(name: "Main", bundle: nil)
         super.init()
         self.pushMenuViewController()
 
@@ -32,8 +35,9 @@ class AppRoute: NSObject {
         let items: [DemoMenuItem] = [
             .StereogumTopAlbums2016Table,
             .StereogumTopAlbums2016Collection,
-            .DemoAsyncDownloads
-        ]
+            .DemoAsyncDownloads,
+            .FirebaseTools,
+            ]
 
         let rootViewController = ItemsTableViewController(items: items, configure: { cell, item in
             cell.textLabel?.text = item.rawValue
@@ -62,13 +66,17 @@ class AppRoute: NSObject {
                 if let demoAyncDownloadsVC = demoAsyncDownloads.viewController {
                     self.navigationController.pushViewController(demoAyncDownloadsVC, animated: true)
                 }
+
+            case .FirebaseTools:
+                let firebaseVC = self.storyboard.instantiateViewController(withIdentifier: "firebasePOCVC")
+                self.navigationController.pushViewController(firebaseVC, animated: true)
             }
         }
 
         navigationController.pushViewController(rootViewController, animated: false)
     }
 
-    func toggleAlertView(sender: Any) {
+    @objc func toggleAlertView(sender: Any) {
         alertController?.toggleAlertView(sender: sender)
     }
 }
